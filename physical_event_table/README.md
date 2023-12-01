@@ -1,4 +1,5 @@
-## event테이블 SQL구문
+## ⭐event테이블 SQL구문
+```
 CREATE TABLE IF NOT EXISTS `event` (
   `event_id_pk` int(11) NOT NULL,
   `event_item_id_fk` int(11) NOT NULL,
@@ -7,3 +8,6 @@ CREATE TABLE IF NOT EXISTS `event` (
   `company` varchar(50) NOT NULL DEFAULT '',
   PRIMARY KEY (`event_id_pk`) USING BTREE
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
+```
+
+- `event_id_pk` : event ID
