@@ -10,4 +10,8 @@ CREATE TABLE IF NOT EXISTS `event` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 ```
 
-- `event_id_pk` : event ID
+- `event_id_pk` : event 테이블 ID
+- `event_item_id_fk` : event에 해당하는 item ID
+- `discount` : event 할인률
+- `expire time` : event 쿠폰 만료시간
+- `company` : event 주최 회사
