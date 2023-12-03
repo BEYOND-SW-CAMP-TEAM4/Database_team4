@@ -24,3 +24,18 @@ INSERT INTO item (description, name, cost_price, grade, category)
 VALUES ('빨래에 붙는 잡냄새, 훌훌 떠나보내요',
         '액츠퍼펙트 세탁세제 실내건조(일반) 용기 3.0L',
         12990, 5, '세제·방향·탈취');
+
+INSERT INTO item (description, name, item_type, expire_date, cost_price, grade, category)
+VALUES ('문득 수박이 먹고 싶은 날, 엘제이드를 떠오릴 수 밖에!',
+        '[2개 묶음] 엘제이드 얼린 생수박주스 410ml',
+        '냉동', '2024-03-21', 9980, 3, '음료·커피·생수');
+
+INSERT INTO item (description, name, item_type, expire_date, cost_price, grade, category)
+VALUES ('중국 유학파가 인정한 오리지널 마라탕',
+        '프로즌 마라탕 진한맛 1150g',
+        '냉동', '2024-05-12', 19390, 4, '밀키트·간편식');
+
+INSERT INTO item (description, name, item_type, expire_date, cost_price, grade, category)
+VALUES ('돼지고기의 명가, 하남돼지집',
+        '[2개 묶음] 하남돼지집 고깃집 차돌 된장찌개 250g',
+        '냉동', '2024-06-30', 9980, 5, '밀키트·간편식');
