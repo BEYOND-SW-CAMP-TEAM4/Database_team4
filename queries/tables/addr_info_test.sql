@@ -61,3 +61,21 @@ INSERT INTO addr_info (stat_code, city, sigungu, eupmyeondong,
                        street_code, street_name, zip_code, building, building_details)
 VALUES ('2635010600', '부산광역시', '해운대구', '중동',
         '263504199011', '달맞이길 30', '48099', '엘시티', '타워에이동');
+
+INSERT INTO addr_info (stat_code, city, sigungu, eupmyeondong, street_code, street_name, zip_code,
+                       building, building_details)
+VALUES ('1174010800', '서울특별시', '강동구', '성내동', '117402123001', '강동대로 205', '05407',
+        'MSA Center', '3층');
+
+INSERT INTO addr_info (stat_code, city, sigungu, eupmyeondong, street_code, street_name, zip_code)
+VALUES ('1159010500', '서울특별시', '동작구', '흑석동', '115904157660', '흑석로6가길 15', '06974');
+
+INSERT INTO addr_info (stat_code, city, sigungu, eupmyeondong, street_code, street_name, zip_code,
+                       building, building_details)
+VALUES ('1159010500', '서울특별시', '동작구', '흑석동', '115903119009', '현충로 52', '06909',
+        '아크로 리버하임', '101동');
+
+INSERT INTO addr_info (stat_code, city, sigungu, eupmyeondong, street_code, street_name, zip_code,
+                       building, building_details)
+VALUES ('1159010500', '서울특별시', '동작구', '흑석동', '115903119006', '서달로 90', '06987',
+        '흑석자이아파트', '321동');
