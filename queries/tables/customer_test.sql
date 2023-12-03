@@ -19,4 +19,7 @@ VALUES ('핑크맨', '제시', 'p!nkm4n', '010-9999-8178', 13, 25, 'M', 1984, 'Y
 INSERT INTO customer (user_id, name, password, tel, addr_id, age, gender, point, alarm, signin_date)
 VALUES ('BALLERINA', '전종서', 'burn!nG', '010-1017-0001', 14, 29, 'W', 20000, 'Y', '2023-07-05');
 
+INSERT INTO customer (user_id, name, password, tel, addr_id, age, gender, point, alarm, signin_date)
+VALUES ('파친코', '김민하', 'pachinko123', '010-2022-0325', 9, 29, 'W', 164, 'Y', '2023-11-11');
+
 SELECT * FROM customer;
