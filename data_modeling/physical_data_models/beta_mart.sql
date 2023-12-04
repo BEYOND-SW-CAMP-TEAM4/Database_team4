@@ -91,7 +91,7 @@ CREATE TABLE IF NOT EXISTS `customer`
     `addr_id`     BIGINT,
     `age`         TINYINT UNSIGNED,
     `gender`      ENUM ('M', 'W', 'NONE') DEFAULT 'NONE',
-    `point`       INT UNSIGNED,
+    `point`       INT UNSIGNED DEFAULT 0,
     `alarm`       ENUM ('Y','N')          DEFAULT 'Y',
     `signin_date` DATETIME                DEFAULT CURRENT_TIMESTAMP,
     PRIMARY KEY (`id`),
@@ -144,10 +144,8 @@ CREATE TABLE IF NOT EXISTS `orders`
     `total_count`  INT UNSIGNED NOT NULL,
     `use_point`    INT UNSIGNED DEFAULT 0,
     `total_price`  INT UNSIGNED NOT NULL,
-    `distance`     INT          NOT NULL,
     `coupon_id`    BIGINT,
     `crew_id`      BIGINT,
-    `deliveryfee`  INT UNSIGNED NOT NULL,
     `order_time`   DATETIME     DEFAULT CURRENT_TIMESTAMP,
     PRIMARY KEY (`id`),
     FOREIGN KEY (`customer_id`) REFERENCES `customer` (`id`) ON UPDATE SET NULL ON DELETE SET NULL,
@@ -188,11 +186,13 @@ CREATE TABLE IF NOT EXISTS `stock_status`
 -- delivery 테이블
 CREATE TABLE IF NOT EXISTS `delivery`
 (
-    `id`       BIGINT                NOT NULL AUTO_INCREMENT,
-    `name`     VARCHAR(50)           NOT NULL,
-    `state`    ENUM ('PICK', 'WAIT') NOT NULL,
-    `locate`   VARCHAR(255)          NOT NULL,
-    `order_id` BIGINT                NOT NULL,
+    `id`           BIGINT                NOT NULL AUTO_INCREMENT,
+    `name`         VARCHAR(50)           NOT NULL,
+    `state`        ENUM ('PICK', 'WAIT') NOT NULL,
+    `distance`     INT                   NOT NULL,
+    `locate`       VARCHAR(255)          NOT NULL,
+    `deliveryfee`  INT UNSIGNED          NOT NULL,
+    `order_id`     BIGINT                NOT NULL,
     PRIMARY KEY (`id`),
     FOREIGN KEY (`order_id`) REFERENCES `orders` (`id`) ON DELETE CASCADE
 ) ENGINE = InnoDB
