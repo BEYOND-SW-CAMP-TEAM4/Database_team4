@@ -127,6 +127,7 @@ CREATE TABLE IF NOT EXISTS `crew`
     `end_date`    DATETIME,
     `addr_id`     BIGINT,
     `addr_detail` VARCHAR(45),
+    `work_type`   VARCHAR(40),
     `store_id`    BIGINT,
     PRIMARY KEY (`id`),
     FOREIGN KEY (`addr_id`) REFERENCES `addr_info` (`id`) ON UPDATE SET NULL ON DELETE SET NULL,
@@ -194,7 +195,7 @@ CREATE TABLE IF NOT EXISTS `delivery`
     `deliveryfee`  INT UNSIGNED          NOT NULL,
     `order_id`     BIGINT                NOT NULL,
     PRIMARY KEY (`id`),
-    FOREIGN KEY (`order_id`) REFERENCES `orders` (`id`) ON DELETE CASCADE
+    FOREIGN KEY (`order_id`) REFERENCES `orders` (`id`) ON DELETE CASCADE,
 ) ENGINE = InnoDB
   DEFAULT CHARSET = utf8mb4
   COLLATE = utf8mb4_general_ci;
